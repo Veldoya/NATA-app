@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "NATA Worker",
+    "slug": "nata-worker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0D5C3A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ng.com.natalagoscouncil.worker",
+      "infoPlist": {
+        "NSCameraUsageDescription": "NATA Worker needs camera access to scan certificate verification QR codes and capture workshop/job evidence.",
+        "NSPhotoLibraryUsageDescription": "NATA Worker needs photo library access to upload documents, trade evidence, and workshop photos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0D5C3A"
+      },
+      "package": "ng.com.natalagoscouncil.worker",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow NATA Worker to access your camera to scan official certificate QR codes."
+        }
+      ],
+      "expo-secure-store",
+      "expo-asset",
+      "expo-font"
+    ],
+    "extra": {
+      "apiBaseUrl": "https://api.natalagoscouncil.com.ng/api/v1",
+      "websiteUrl": "https://natalagoscouncil.com.ng"
+    }
+  }
+}
